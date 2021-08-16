@@ -2,6 +2,17 @@
 A Statistical Machine Learning method for producing predictions
 
 
+\[ \begin{aligned}
+d =
+\begin{cases}
+level_{base}, & \lambda \leq \frac{1}{2} \
+nearest(\lambda), & \lambda > \frac{1}{2},
+level_{base} + \lambda \leq
+q + \frac{1}{2} \
+q, & \lambda > \frac{1}{2}, level_{base} + \lambda > q + \frac{1}{2}
+\end{cases}
+\end{aligned} \]
+
 
 <img src="https://render.githubusercontent.com/render/math?math=\begin{cases} 1 & a\\ 2 & b\end{cases}">
 
