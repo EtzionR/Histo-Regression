@@ -2,8 +2,8 @@
 A Statistical Machine Learning method for producing predictions
 
 <img src="https://render.githubusercontent.com/render/math?math=\begin{cases}
-          1&\text{if $n=0$}\\
-          |C_{n-1}| \times 2&\text{otherwise}
+  1&\text{if $n=0$}\\
+  |C_{n-1}| \times 2&\text{otherwise}
 \end{cases}">
 
 <img src="https://render.githubusercontent.com/render/math?math=\begin{cases} 1 & a\\ 2 & b\end{cases}">
