@@ -1,6 +1,14 @@
 # Histo-Regression
 A Statistical Machine Learning method for producing predictions
 
+function sgn (x) {
+  if (x < 0) return -1
+  if (x > 0) return 1
+  return 0
+}
+
+
+
 <img src="https://render.githubusercontent.com/render/math?math=\begin{cases}
   1&\text{if $n=0$}\\
   |C_{n-1}| \times 2&\text{otherwise}
