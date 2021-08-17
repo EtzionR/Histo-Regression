@@ -1,5 +1,5 @@
 # Histo-Regression
-A Statistical Machine Learning method for producing predictions. This Algorithm can use as a **Regressor** also as **Classifier**.
+A Statistical Machine Learning method for producing predictions. This [**historeg.py**](https://github.com/EtzionR/Histo-Regression/blob/main/historeg.py) Algorithm can use as a **Regressor** also as **Classifier**.
 
 ## Overview
 While the training process, the algorithm split the data to **K Cells**, by using floor-division. For each cell, the algorithm use the function defined by the user, to calculate the choosen value of the cell. 
@@ -47,7 +47,7 @@ We will check the results by comparing the RMSE:
 
 As we can see, we get the best results for the Historeg that used 2 division values!
 
-As mentioned, the algorithm also allows classification on datasets. To apply classification using this algorithm, the user just need to choose the right function for classifiacation. In this case, we can use the default **Mode** function. In this example, we classify the [**class.csv**](https://github.com/EtzionR/Histo-Regression/blob/main/examples/class.csv) file. The file includes 11,000+ rows, each with 10 features. The variable we are trying to predict is the category to which each of the records belongs - **"cls"** - 4 categories in total. To do this, we will define division value = 0.2 on all fields, calculate the accuracy using **cross validation** and show the results as confusion matrix:
+As mentioned, the [historeg.py](https://github.com/EtzionR/Histo-Regression/blob/main/historeg.py) algorithm also allows classification on datasets. To apply classification using this algorithm, the user just need to choose the right function for classifiacation. In this case, we can use the default **Mode** function. In this example, we classify the [**class.csv**](https://github.com/EtzionR/Histo-Regression/blob/main/examples/class.csv) file. The file includes 11,000+ rows, each with 10 features. The variable we are trying to predict is the category to which each of the records belongs - **"cls"** - 4 categories in total. To do this, we will define division value = 0.2 on all fields, calculate the accuracy using **cross validation** and show the results as confusion matrix:
 
 ![confusion](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/confusion.png)
 
@@ -61,7 +61,7 @@ At the same time, we can also see cases where the empty value is actually requir
 
 As we can see, we get wrong prediction in the empty range. That teach as that the algorithm requires diverse training data in order to get the best result. In addition, the algorithm is **not** intended for extrapolation and can only give predictions about the data range on which it is trained.
 
-When we comparing the algorithm to other methods, it seems to get quite good results. In the [multi-dimensional example](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/a_b.png) we have saw, we even found that it returns better results than the polynomial regression. At the same time, there seem to be times when other algorithms return better results, as can be seen in the following example:
+When we comparing the [historeg.py](https://github.com/EtzionR/Histo-Regression/blob/main/historeg.py) algorithm to other methods, it seems to get quite good results. In the [multi-dimensional example](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/a_b.png) we have saw, we even found that it returns better results than the polynomial regression. At the same time, there seem to be times when other algorithms return better results, as can be seen in the following example:
 
 ![complex](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/complex.png)
 
