@@ -28,7 +28,7 @@ As follows, the algorithm defines a fixed result for each range of values (cell)
 
 This prediction algorithm could even handle with complex function:
 
-![mixed](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/mixed.png)
+![mixed](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/mixed_.png)
 
 As mentioned, the division into different cells is based on **floor division**, using of a value selected by the user ("**division**"). Using different values will lead to different results and a different quality of predication. Some inputs will result in **underfitting** results, while others will may cause **overfitting**. As can be seen in the following example:
 
