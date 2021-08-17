@@ -17,13 +17,6 @@ When:
 | **Cj**    | the choosen cell (when j between 1 to K)                           |
 | **T(Y)**  | the defined function                                               |
 
-**Xi** = the features we want to get prediction for them (test\validation),
-
-**K** = the number of cells, 
-
-**Cj** = the choosen cell (when j between 1 to K),
-
-**T(Y)** = the defined function.
 
 The user can choose any function he want to calculate the value of each cell. The default is **Mode** function (that used for classification):
 
