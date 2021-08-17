@@ -42,3 +42,5 @@ We will check the results by comparing the RMSE:
 ![a&b](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/a_b.png)
 
 As we can see, we get the best results for the Historeg that used 2 division values!
+
+
