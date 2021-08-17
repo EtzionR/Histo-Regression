@@ -61,3 +61,10 @@ At the same time, we can also see cases where the empty value is actually requir
 
 As we can see, we get wrong prediction in the empty range. That teach as that the algorithm requires diverse training data in order to get the best result. In addition, the algorithm is **not** intended for extrapolation and can only give predictions about the data range on which it is trained.
 
+When we comparing the algorithm to other methods, it seems to get quite good results. In the [multi-dimensional example](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/a_b.png) we have saw, we even found that it returns better results than the polynomial regression. At the same time, there seem to be times when other algorithms return better results, as can be seen in the following example:
+
+![complex](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/complex.png)
+
+So, as we see, this algorithm may be useful for our needs, but should examining it against other methods.
+
+
