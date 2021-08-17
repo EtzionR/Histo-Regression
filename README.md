@@ -67,6 +67,12 @@ When we comparing the algorithm to other methods, it seems to get quite good res
 
 So, as we see, this algorithm may be useful for our needs, but should examining it against other methods.
 
+Another important aspect of the algorithm, is that in addition to the values of the predicate cells, its also calculate the **standard deviation** of each cell. Using this information, it is possible to examine how match the data of each cell diverse, and thus gain an idea about the quality of the value in each cell. To illustrate this, we can sample simple linear function, when the **noise** to each observation, gets bigger with x. Now, we can check the standard deviation of each cell in the output prediction to this function:
+
+![std](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/std.png)
+
+As we can see, the standard deviation also get bigger with the x values!
+
 ## Libraries
 the code required those libraries:
 
@@ -105,9 +111,11 @@ y_pred = Historeg(division,f=np.mean, empty=empty).fit(x_train,y_train).predict(
 
 When the variables displayed are:
 
-**data:** pandas dataframe that you want to perform clustering on all its columns
+**division:** number or ary, defined the value for the floor division of the training data
 
+**f:** the required function for calculate the value of each cell (default: mode function)
 
+**empty:** the value for record out of range of the cells  (default: -1)
 
 ## License
 MIT © [Etzion Harari](https://github.com/EtzionData)
