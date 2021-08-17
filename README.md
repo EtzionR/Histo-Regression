@@ -12,7 +12,7 @@ When:
 
 **K** = the number of cells, 
 
-**Cj** = the choosen cell,
+**Cj** = the choosen cell (when j between 1 to K),
 
 **T(Y)** = the defined function.
 
