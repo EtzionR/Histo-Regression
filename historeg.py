@@ -89,4 +89,5 @@ class Historeg:
             return np.array([self.cells[row] if row in self.cells else self.empty
                              for row in x.iloc[:, 0] // self.divisor])
 
+# License
 # MIT © Etzion Harari
