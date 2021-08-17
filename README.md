@@ -32,7 +32,7 @@ As mentioned, the division into different cells is based on **floor division**, 
 
 As we can see, we get the best results when division=1. when the value close to 10, it cause to underfitting, and when it close to 0, we can see overfitting of the curve.
 
-In the **multi-dimensional** case, the division value can be set as a **vector**, so that each column in the dataset will have a **unique and customized** division value. The ability to give each column a unique value allows us to improve the resulting prediction. Because differents columns may have different scale, this aloow us to create model that fits to each column. In the following example, we use a [**coord.csv**](https://github.com/EtzionR/Histo-Regression/blob/main/examples/coord.csv) dataset, that displays 50,000 elevation points in space, as a function of their coordinates, which are presented as A & B features. Based on this data, using cross validation, we will perform a quality test for three prediction methods: 
+In the **multi-dimensional** case, the division value can be set as a **vector**, so that each column in the dataset will have a **unique and customized** division value. The ability to give each column a unique value allows us to improve the resulting prediction. Because differents columns may have different scale, this aloow us to create model that fits to each column. In the following example, we use a [**coord.csv**](https://github.com/EtzionR/Histo-Regression/blob/main/examples/coord.csv) dataset, that displays 50,000 elevation points in space, as a function of their coordinates, which are presented as A & B features. Based on this data, using **cross validation**, we will perform a quality test for three prediction methods: 
 - **Polynomial** regression, 
 - **Historeg** based on **1** division value (division = 0.008), 
 - **Historeg** based on **2** division values (division = [.009,.007]).
@@ -43,4 +43,17 @@ We will check the results by comparing the RMSE:
 
 As we can see, we get the best results for the Historeg that used 2 division values!
 
+As mentioned, the algorithm also allows classification on datasets. To apply classification using this algorithm, the user just need to choose the right function for classifiacation. In this case, we can use the default **Mode** function. In this example, we classify the [**class.csv**](https://github.com/EtzionR/Histo-Regression/blob/main/examples/class.csv) file. The file includes 11,000+ rows, each with 10 features. The variable we are trying to predict is the category to which each of the records belongs - **"cls"** - 4 categories in total. To do this, we will define division value = 0.2 on all fields, calculate the accuracy using **cross validation** and show the results as confusion matrix:
+
+![confusion](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/confusion.png)
+
+As we can see, we get pretty high accuracy **+95%**!
+
+In addition, we can see that we got a slightly different confusion matrix than usual, which also includes another prediction column of category marked as **"-1"**. This column was created as a result of the default **empty value** of the algorithm. This value defiend for a situation when the given records not match to any cell. To prevent error, the algorithm return empty value. In our case, it can be seen that all the records were successfully associated with one of the given cells and that 0% of the observations were classified under category -1. 
+
+At the same time, we can also see cases where the empty value is actually required. To illustrate this, we will artificially sample one-dimensional data from a simple linear function, but remove certain range from our data. Because we trying to use the algorithm as regressor, we defined empty=0. Now, let's look which prediction the algorithm returns:
+
+![extra](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/extra.png)
+
+As we can see, we get wrong prediction in the empty range. That teach as that the algorithm requires diverse training data in order to get the best result. In addition, the algorithm is **not** intended for extrapolation and can only give predictions about the data range on which it is trained.
 
