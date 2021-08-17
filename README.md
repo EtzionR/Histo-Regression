@@ -24,7 +24,7 @@ The user can choose any function he want to calculate the value of each cell. Th
 
 As follows, the algorithm defines a fixed result for each range of values (cell), as can be seen in an example based on a one-dimensional case:
 
-![1d](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/simplae_case.png)
+![1d](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/linear_case.png)
 
 As mentioned, the division into different cells is based on **floor division**, using of a value selected by the user ("**division**"). Using different values will lead to different results and a different quality of predication. Some inputs will result in **underfitting** results, while others will may cause **overfitting**. As can be seen in the following example:
 
