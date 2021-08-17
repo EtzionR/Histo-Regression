@@ -10,6 +10,13 @@ Now, when we want to get prediction for new data, the algorithm find the proper 
 
 When:
 
+| Variable  | explanation                                                        |
+| --------- | ------------------------------------------------------------------ |
+|  **Xi**   | the features we want to get prediction for them (test\validation)  |
+| **K**     | the number of cells                                                |
+| **Cj**    | the choosen cell (when j between 1 to K)                           |
+| **T(Y)**  | the defined function                                               |
+
 **Xi** = the features we want to get prediction for them (test\validation),
 
 **K** = the number of cells, 
