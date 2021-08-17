@@ -26,7 +26,7 @@ As follows, the algorithm defines a fixed result for each range of values (cell)
 
 ![1d](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/linear_case.png)
 
-This prediction algorithm could even handle with complex function:
+This prediction algorithm could even handle with complex function (that build from different function in every range):
 
 ![mixed](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/mixed_f.png)
 
