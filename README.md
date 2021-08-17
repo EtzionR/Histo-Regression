@@ -67,4 +67,47 @@ When we comparing the algorithm to other methods, it seems to get quite good res
 
 So, as we see, this algorithm may be useful for our needs, but should examining it against other methods.
 
+## Libraries
+the code required those libraries:
 
+- **pandas**
+
+- **numpy**
+
+
+## Application
+An application of the code is attached to this page under the name: 
+
+[**implementation.py**](https://github.com/EtzionR/Histo-Regression/blob/main/implementation.py)
+
+the examples outputs are also attached here.
+
+
+## Example for using the code
+To use this code, you just need to import it as follows:
+``` sh
+# import
+from historeg import Historeg
+import numpy as np
+
+# define variables
+n = 1000
+x_train = np.random.uniform(0,10,n)
+y_train = (x_train*.5) + 5 + np.random.normal(0,1.1,n)
+
+x_test = np.random.uniform(0,10,100)
+division = 1
+empty = 0
+
+# application
+y_pred = Historeg(division,f=np.mean, empty=empty).fit(x_train,y_train).predict(x_test)
+```
+
+When the variables displayed are:
+
+**data:** pandas dataframe that you want to perform clustering on all its columns
+
+
+
+## License
+MIT © [Etzion Harari](https://github.com/EtzionData)
