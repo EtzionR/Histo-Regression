@@ -32,4 +32,13 @@ As mentioned, the division into different cells is based on **floor division**, 
 
 As we can see, we get the best results when division=1. when the value close to 10, it cause to underfitting, and when it close to 0, we can see overfitting of the curve.
 
+In the **multi-dimensional** case, the division value can be set as a **vector**, so that each column in the dataset will have a **unique and customized** division value. The ability to give each column a unique value allows us to improve the resulting prediction. Because differents columns may have different scale, this aloow us to create model that fits to each column. In the following example, we use a [coord.csv](https://github.com/EtzionR/Histo-Regression/blob/main/examples/coord.csv) dataset, that displays 50,000 elevation points in space, as a function of their coordinates, which are presented as A & B features. Based on this data, using cross validation, we will perform a quality test for three prediction methods: 
+- **Polynomial** regression, 
+- **Historeg** based on **1** division value, 
+- **Historeg** based on **2** division values.
 
+We will check the results by comparing the RMSE:
+
+![a&b](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/a_b.png)
+
+As we can see, we get the best results for the Historeg that used 2 division values!
