@@ -22,6 +22,8 @@ The user can choose any function he want to calculate the value of each cell. Th
 
 <img src="https://latex.codecogs.com/svg.image?T(Y)=\begin{cases}Mean(Y)&&space;\\Median(Y)&&space;\\Mode(Y)&&space;\\?&&space;\end{cases}&space;" title="T(Y)=\begin{cases}Mean(Y)& \\Median(Y)& \\Mode(Y)& \\?& \end{cases} " />
 
+Because we using floor-division, we just neeed to add the Y values to each cell, and calculate the cell value with our selected function. So, basically we only run once on the whole X table, and then only twice on the Y vector: once to add each Yi in its cell and again to apply the selected function on each cell. Therefore, basically the runtime of the algorithm is **O(n∙m)**, where m is the number of columns in X table and n is the number of rows (In case of using median function, the runtime changes slightly, and becomes O(max(m∙n, n∙logn)). The prediction process also requires a similar runtime. Therefore, this algorithm  allows us to get a prediction in short time!
+
 As follows, the algorithm defines a fixed result for each range of values (cell), as can be seen in an example based on a one-dimensional case:
 
 ![1d](https://github.com/EtzionR/Histo-Regression/blob/main/pictures/linear_case.png)
